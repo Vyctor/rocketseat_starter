@@ -6,12 +6,11 @@ let loadingDiv = document.querySelector("#repositories #loading");
 const apiLink = "https://api.github.com/users/";
 
 async function search() {
-  loading();
   userData = await getGithubUserData();
-  removeLoading();
 }
 
 function getGithubUserData() {
+  loading();
   let userName = inputElement.value;
   repositoryListElement.innerHTML = "";
   response = axios
@@ -27,6 +26,7 @@ function getGithubUserData() {
         repositoryListElement.appendChild(repositoryElement);
       }
       inputElement.value = "";
+      removeLoading();
     })
     .catch(error => {
       repositoryElement = document.createElement("p");
@@ -34,6 +34,7 @@ function getGithubUserData() {
 
       repositoryElement.appendChild(repositoryName);
       repositoryListElement.appendChild(repositoryElement);
+      removeLoading();
     });
 }
 
