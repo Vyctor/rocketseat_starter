@@ -1,4 +1,5 @@
 // Exercício 2
+
 let divElement = document.getElementById("squares");
 let buttonElement = document.querySelector("#app button");
 

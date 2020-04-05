@@ -1,16 +1,18 @@
+// EXERCÍCIO 1
+
 let inputElement = document.querySelector("#app input");
 let buttomElement = document.querySelector("#app button");
 let answerDivElement = document.querySelector("#answer");
 console.log(inputElement, buttomElement, answerDivElement);
 
 function verifyAge(age) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     if (age >= 18) {
       resolve("Maior de idade, pode entrar.");
     } else {
       reject("Menor de idade, vá para casa!");
     }
-  }).catch(error => error);
+  }).catch((error) => error);
 }
 
 async function answer() {

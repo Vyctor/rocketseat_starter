@@ -1,7 +1,6 @@
 // Exercícios
 
 // 1.1
-
 import ClasseUsuario, { idade as IdadeUsuario } from "./functions";
 ClasseUsuario.info();
 

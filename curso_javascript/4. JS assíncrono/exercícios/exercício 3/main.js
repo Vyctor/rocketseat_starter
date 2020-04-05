@@ -1,3 +1,5 @@
+// EXERCÍCIO 3
+
 let inputElement = document.querySelector("#app input");
 let buttonElement = document.querySelector("#app button");
 let repositoryListElement = document.querySelector("#repositories ul");
@@ -15,7 +17,7 @@ function getGithubUserData() {
   repositoryListElement.innerHTML = "";
   response = axios
     .get(`${apiLink}${userName}/repos`)
-    .then(response => {
+    .then((response) => {
       let repositories = response.data;
 
       for (repository of repositories) {
@@ -28,7 +30,7 @@ function getGithubUserData() {
       inputElement.value = "";
       removeLoading();
     })
-    .catch(error => {
+    .catch((error) => {
       repositoryElement = document.createElement("p");
       repositoryName = document.createTextNode(error);
 

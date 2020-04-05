@@ -1,3 +1,5 @@
+// EXERCÍCIO 4
+
 let listElement = document.querySelector("#users ul");
 let inputElement = document.querySelector("#app input");
 let userDatabase = [];

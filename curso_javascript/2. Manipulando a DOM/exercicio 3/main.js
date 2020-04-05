@@ -1,3 +1,5 @@
+// EXERCÍCIO 3
+
 let userDatabase = ["Diego", "Gabriel", "Lucas"];
 
 var listElement = document.querySelector("#users ul");
